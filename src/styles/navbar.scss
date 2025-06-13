@@ -1,0 +1,12 @@
+@use './variables' as var;
+
+.navbar {
+  background-color: var.$color-primary;
+  .nav-link {
+    color: var.$color-white;
+
+    &:hover {
+      color: var.$color-secondary;
+    }
+  }
+}

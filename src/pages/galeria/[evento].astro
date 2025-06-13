@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GaleriaFotos from "../../components/reactComponents/GaleriaFotos.jsx";
+
+// 🧱 Primero definimos los eventos con export const
+export const eventos = [
+  {
+    slug: "prod-brisas-sur",
+    titulo: "Producción Brisas del Sur",
+  },
+  {
+    slug: "15-ema",
+    titulo: "15 Años de Ema",
+  },
+];
+
+// ⚙️ Después definimos getStaticPaths correctamente
+export async function getStaticPaths() {
+  return eventos.map((evento) => ({
+    params: { evento: evento.slug },
+  }));
+}
+
+// 🔎 Obtenemos el evento de la URL
+const { evento } = Astro.params;
+
+// 🧠 Buscamos los datos del evento según el slug
+const eventoData = eventos.find((e) => e.slug === evento);
+
+if (!eventoData) {
+  throw new Error(`Evento no encontrado: ${evento}`);
+}
+---
+
+<Layout title={`Galería - ${eventoData.titulo}`}>
+  <GaleriaFotos client:load evento={eventoData.slug} />
+</Layout>

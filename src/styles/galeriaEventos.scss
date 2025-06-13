@@ -1,0 +1,48 @@
+.galeria-eventos {
+  background-color: #0f172a;
+  color: #f1f5f9;
+
+  .titulo-seccion {
+    font-size: 2.25rem;
+    font-weight: bold;
+  }
+
+  .evento-card {
+    background-color: #1a202c;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      border-radius: 8px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.foto-wrapper {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.foto-wrapper.seleccionada {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
