@@ -1,21 +1,24 @@
 const eventos = [
   {
     slug: "prod-brisas-sur",
-    titulo: "Producción de Brisas del Sur – Academia",
+    titulo: "Academia Brisas del sur",
     portada: "/pics/pic2.jpg",
   },
-  {
-    slug: "15-ema",
-    titulo: "15 Años de Ema",
-    portada: "/pics/pic3.jpg",
-  },
+  // {
+  //   slug: "15-ema",
+  //   titulo: "15 Años de Ema",
+  //   portada: "/pics/pic3.jpg",
+  // },
+  // {
+  //   slug: "academia-renacer-argentina",
+  //   titulo: "Academia Renacer Argentina",
+  //   portada: "/pics/pic2.jpg",
+  // },
 ];
 
 export default function Eventos() {
   return (
     <section className="galeria-eventos container py-5">
-      <h2 className="text-center mb-4 text-white">Eventos publicados</h2>
-
       <div className="row g-4">
         {eventos.map((evento) => (
           <div className="col-12 col-sm-6 col-lg-4" key={evento.slug}>

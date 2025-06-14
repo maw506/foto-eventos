@@ -10,6 +10,7 @@ export default function GaleriaFotos({ evento }) {
     const cantidadPorEvento = {
       "prod-brisas-sur": 6,
       "15-ema": 5,
+      "academia-renacer-argentina": 5,
     };
 
     const total = cantidadPorEvento[evento] || 0;
