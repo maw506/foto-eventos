@@ -3,103 +3,103 @@ const eventos = [
     slug: "encuentro-brisas-1",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 1",
-    portada: "/pics/pic5.jpg",
+    portada: "/eventos/encuentro-brisas-1/foto_14.jpg",
   },
   {
     slug: "encuentro-brisas-2",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 2",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-2/foto_8.jpg",
   },
   {
     slug: "encuentro-brisas-3",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 3",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-3/foto_23.jpg",
   },
   {
     slug: "encuentro-brisas-4",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 4",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-4/foto_1.jpg",
   },
   {
     slug: "encuentro-brisas-5",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 5",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-5/foto_17.jpg",
   },
   {
     slug: "encuentro-brisas-6",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 6",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-6/foto_23.jpg",
   },
   {
     slug: "encuentro-brisas-7",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 7",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-7/foto_21.jpg",
   },
   {
     slug: "encuentro-brisas-8",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 8",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-8/foto_36.jpg",
   },
   {
     slug: "encuentro-brisas-9",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 9",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-9/foto_18.jpg",
   },
   {
     slug: "encuentro-brisas-10",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 10",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-10/foto_24.jpg",
   },
   {
     slug: "encuentro-brisas-11",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 11",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-11/foto_32.jpg",
   },
   {
     slug: "encuentro-brisas-12",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 12",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-12/foto_49.jpg",
   },
   {
     slug: "encuentro-brisas-13",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 13",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-13/foto_59.jpg",
   },
   {
     slug: "encuentro-brisas-14",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 14",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-14/foto_37.jpg",
   },
   {
     slug: "encuentro-brisas-15",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 15",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-15/foto_8.jpg",
   },
   {
     slug: "encuentro-brisas-16",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 16",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-16/foto_33.jpg",
   },
   {
     slug: "encuentro-brisas-17",
     titulo: "Encuentro Brisas del sur",
     subtitulo: "Academia Parte 17",
-    portada: "/pics/pic2.jpg",
+    portada: "/eventos/encuentro-brisas-17/foto_23.jpg",
   },
 ];
 
@@ -123,6 +123,7 @@ export default function Eventos() {
                   className="img-fluid rounded mb-3"
                 />
                 <h3 className="h5 text-center">{evento.titulo}</h3>
+                <h6 className="h5 text-center">{evento.subtitulo}</h6>
               </a>
             </div>
           </div>
