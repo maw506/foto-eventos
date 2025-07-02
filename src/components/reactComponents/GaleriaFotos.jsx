@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Image, Button, FloatButton, Tooltip } from "antd";
 import { WhatsAppOutlined } from "@ant-design/icons";
+import Masonry from "react-masonry-css";
+import "../../styles/galeriaEventos.scss"
 
 export default function GaleriaFotos({ evento }) {
   const [imagenes, setImagenes] = useState([]);
@@ -8,8 +10,23 @@ export default function GaleriaFotos({ evento }) {
 
   useEffect(() => {
     const cantidadPorEvento = {
-      "prod-brisas-sur": 6,
-      "15-ema": 5,
+      "encuentro-brisas-1": 15,
+      "encuentro-brisas-2": 9,
+      "encuentro-brisas-3": 24,
+      "encuentro-brisas-4": 10,
+      "encuentro-brisas-5": 18,
+      "encuentro-brisas-6": 27,
+      "encuentro-brisas-7": 29,
+      "encuentro-brisas-8": 46,
+      "encuentro-brisas-9": 20,
+      "encuentro-brisas-10": 32,
+      "encuentro-brisas-11": 32,
+      "encuentro-brisas-12": 55,
+      "encuentro-brisas-13": 68,
+      "encuentro-brisas-14": 44,
+      "encuentro-brisas-15": 13,
+      "encuentro-brisas-16": 43,
+      "encuentro-brisas-17": 25,
     };
 
     const total = cantidadPorEvento[evento] || 0;
@@ -42,50 +59,58 @@ export default function GaleriaFotos({ evento }) {
 
   return (
     <>
-      <section className="galeria-fotos container py-5">
+      <section
+        className="galeria-fotos"
+        style={{ padding: "0 2rem", maxWidth: "1300px", margin: "0 auto" }}
+      >
         <h2 className="text-white mb-4 text-center">Seleccioná tus fotos</h2>
-        <Image.PreviewGroup>
-          <div className="row g-3">
-            {imagenes.map((src, i) => (
-              <div className="col-6 col-md-4 col-lg-3" key={src}>
-                <div className="text-center">
-                  <div style={{ position: "relative" }}>
-                    <Image
-                      src={src}
-                      alt={`Foto ${i + 1}`}
-                      className="img-fluid rounded"
-                      preview={{ mask: `Foto ${i + 1}` }}
-                    />
-                    <span
-                      style={{
-                        position: "absolute",
-                        top: "8px",
-                        left: "8px",
-                        backgroundColor: "rgba(0,0,0,0.6)",
-                        color: "white",
-                        padding: "2px 6px",
-                        borderRadius: "4px",
-                        fontSize: "0.8rem",
-                      }}
-                    >
-                      #{i + 1}
-                    </span>
-                  </div>
-                  <Button
-                    type={seleccionadas.includes(src) ? "primary" : "default"}
-                    onClick={() => toggleSeleccion(src)}
-                    className="mt-2"
-                    block
+        <Masonry
+          breakpointCols={{
+            default: 4,
+            1200: 3,
+            768: 2,
+            576: 1,
+          }}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {imagenes.map((src, i) => (
+            <div key={src} style={{ breakInside: "avoid" }}>
+              <div className="foto-wrapper text-center">
+                <div style={{ position: "relative" }}>
+                  <Image
+                    src={src}
+                    alt={`Foto ${i + 1}`}
+                    className="img-fluid"
+                    preview={{ mask: `Foto ${i + 1}` }}
+                  />
+                  <span
+                    style={{
+                      position: "absolute",
+                      top: "8px",
+                      left: "8px",
+                      backgroundColor: "rgba(0,0,0,0.6)",
+                      color: "white",
+                      padding: "2px 6px",
+                      borderRadius: "4px",
+                      fontSize: "0.8rem",
+                    }}
                   >
-                    {seleccionadas.includes(src)
-                      ? "Seleccionada ✅"
-                      : "Seleccionar"}
-                  </Button>
+                    #{i + 1}
+                  </span>
                 </div>
+                <Button
+                  type={seleccionadas.includes(src) ? "primary" : "default"}
+                  onClick={() => toggleSeleccion(src)}
+                  className="mt-2"
+                  block
+                >
+                  {seleccionadas.includes(src) ? "Seleccionada" : "Seleccionar"}
+                </Button>
               </div>
-            ))}
-          </div>
-        </Image.PreviewGroup>
+            </div>
+          ))}
+        </Masonry>
       </section>
 
       {seleccionadas.length > 0 && (
