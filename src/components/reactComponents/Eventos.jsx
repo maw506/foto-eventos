@@ -103,10 +103,9 @@ const eventos = [
   },
 ];
 
-
 export default function Eventos() {
   return (
-    <section className="galeria-eventos container py-5">
+    <section className="galeria-eventos  py-5">
       <h2 className="text-center mb-4 text-dark">Eventos publicados</h2>
 
       <div className="row g-4">
@@ -122,8 +121,8 @@ export default function Eventos() {
                   alt={evento.titulo}
                   className="img-fluid rounded mb-3"
                 />
-                <h3 className="h5 text-center">{evento.titulo}</h3>
-                <h6 className="h5 text-center">{evento.subtitulo}</h6>
+                <h3 className="titulo-evento">{evento.titulo}</h3>
+                <h6 className="subtitulo-evento">{evento.subtitulo}</h6>
               </a>
             </div>
           </div>
